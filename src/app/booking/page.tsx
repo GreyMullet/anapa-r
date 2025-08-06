@@ -3,6 +3,7 @@ export default function Booking(){
         <div
             style={{
                 width: '100%',
+                marginTop: '5%'
             }}
         >
             <iframe
