@@ -10,11 +10,11 @@ export const SectionDivider=()=>{
           <span
             key={i}
             style={{
-              width: i === 2 ? '16px' : '10px',
-              height: i === 2 ? '16px' : '10px',
+              width: i===2 ? '16px' : '10px',
+              height: i===2 ? '16px' : '10px',
               borderRadius: '50%',
               backgroundColor: '#ccc',
-              opacity: i === 2 ? 1 : 0.5,
+              opacity: i===2 ? 1 : 0.5,
               transition: 'transform 0.3s',
             }}
           />

@@ -12,7 +12,7 @@ export default function Booking(){
                 style={{
                     width: '100%',
                     maxWidth: '1400px',
-                    height: '100vh',
+                    height: '950px',
                     border: 'none',
                     display: 'block',
                     margin: '0 auto',
