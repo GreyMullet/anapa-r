@@ -8,4 +8,5 @@ export const navItems: NavItems=[
     { id: 5, title: "Контакты", href: "/#contacts" },
     { id: 6, title: "Бронирование", href: "/#booking" },
     { id: 7, title: "Карта сайта", href: "/#map" },
+    { id: 8, title: "О нас", href: "/about-us" },
 ]
