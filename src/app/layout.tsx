@@ -4,27 +4,27 @@ import "./globals.css"
 import { Header } from "./header"
 import { Footer } from "./footer"
 
-const geistSans = Geist({
+const geistSans=Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
+})
 
-const geistMono = Geist_Mono({
+const geistMono=Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
-export const metadata: Metadata = {
+export const metadata: Metadata={
   title: "Отдых в Анапе",
   description: "Апартаменты у моря",
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
+  children: React.ReactNode
+}>){
+  return(
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
