@@ -8,7 +8,7 @@ export default function Booking(){
         >
             <iframe
                 title="Модуль бронирования"
-                src="http://module.roomfox.ru/hotel/202cb962ac59075b964b07152d234b70"
+                src="https://cb08796.tw1.ru/hotel/202cb962ac59075b964b07152d234b70"
                 style={{
                     width: '100%',
                     maxWidth: '1400px',
