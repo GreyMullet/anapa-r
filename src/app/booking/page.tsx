@@ -8,7 +8,7 @@ export default function Booking(){
         >
             <iframe
                 title="Модуль бронирования"
-                src="https://cb08796.tw1.ru/hotel/202cb962ac59075b964b07152d234b70"
+                src="https://cb08796.tw1.ru/hotel/0f7e44a922df352c05c5f73cb40ba115"
                 style={{
                     width: '100%',
                     maxWidth: '1400px',
