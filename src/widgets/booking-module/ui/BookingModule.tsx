@@ -13,7 +13,7 @@ export const BookingModule=()=>{
         >
             <iframe
                 title="Модуль бронирования"
-                src="https://module.roomfox.ru/connection/an20pa25r"
+                src="https://module.roomfox.ru/connect/an20pa25r"
                 style={{
                     width: '100%',
                     maxWidth: '1200px',
