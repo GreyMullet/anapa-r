@@ -1,8 +1,8 @@
 "use client"
 
+import { RoomParams } from "@/shared/types/roomsParamsTypes"
 import Image from "next/image"
 import Link from "next/link"
-import { RoomParams } from "@/shared/types/roomsParamsTypes"
 import styles from "./style.module.css"
 
 export const Room=({ name, slug, description, image }: RoomParams)=>{

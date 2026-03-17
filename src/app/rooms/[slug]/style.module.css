@@ -1,73 +1,183 @@
 .container {
-  padding: 100px;
-  max-width: 1200px;
+  padding: 4rem 1rem 6rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 24px;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-weight: 700;
   text-align: center;
-  color: #1a1a1a;
+  margin: 0 0 2.5rem;
+  color: #0f172a;
 }
 
+/* ─── Главный блок с видео ───────────────────────────────────── */
+.heroMedia {
+  margin: 0 auto 4rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.mediaCard {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.22);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.mediaCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.3);
+}
+
+.mediaLabel {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  z-index: 10;
+  background: rgba(15, 23, 42, 0.8);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  backdrop-filter: blur(8px);
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.video:playing + .playOverlay,
+.video:not([paused]) + .playOverlay {
+  opacity: 0;
+}
+
+.playButton {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 3px solid rgba(255, 255, 255, 0.45);
+  transition: all 0.3s ease;
+}
+
+.playButton svg {
+  width: 48px;
+  height: 48px;
+  margin-left: 6px;
+  color: white;
+}
+
+.mediaCard:hover .playButton {
+  background: rgba(239, 68, 68, 0.9);
+  transform: scale(1.12);
+}
+
+/* ─── Галерея фото ───────────────────────────────────────────── */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 1.5rem;
 }
 
-.imageWrapper {
+.photoCard {
   position: relative;
-  width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4 / 3;
+  border-radius: 1rem;
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.imageWrapper:hover {
-  transform: scale(1.02);
+.photoCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
 }
 
-.image {
+.photo {
   object-fit: cover;
-  border-radius: 16px;
-  transition: opacity 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
+.photoCard:hover .photo {
+  transform: scale(1.07);
+}
+
+/* ─── Fullscreen ─────────────────────────────────────────────── */
 .fullscreenOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.94);
   z-index: 1000;
   display: flex;
-  justify-content: center;
   align-items: center;
-  cursor: zoom-out;
+  justify-content: center;
+  backdrop-filter: blur(8px);
 }
 
 .fullscreenImage {
+  max-width: 96vw;
+  max-height: 96vh;
   object-fit: contain;
-  z-index: 1001;
+  border-radius: 0.8rem;
 }
 
-.closeButton {
-  position: fixed;
-  top: 20px;
-  right: 30px;
+.closeBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
   font-size: 3rem;
   color: white;
-  background: none;
+  background: rgba(0, 0, 0, 0.5);
   border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
-  z-index: 1002;
-  transition: transform 0.2s;
+  transition: all 0.25s;
 }
 
-.closeButton:hover {
-  transform: scale(1.2);
+.closeBtn:hover {
+  background: #ef4444;
+  transform: rotate(90deg);
 }
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .heroMedia {
+    margin-bottom: 3rem;
+  }
+  .gallery {
+    gap: 1.25rem;
+  }
+}
+

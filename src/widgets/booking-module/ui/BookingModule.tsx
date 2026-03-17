@@ -17,7 +17,7 @@ export const BookingModule=()=>{
                 style={{
                     width: '100%',
                     maxWidth: '1200px',
-                    height: '900px',
+                    height: '600px',
                     border: 'none',
                     display: 'block',
                     margin: '0 auto',
