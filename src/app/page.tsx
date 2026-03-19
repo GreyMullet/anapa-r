@@ -1,3 +1,4 @@
+import { Rooms } from "@/features/rooms"
 import { SectionDivider } from "@/shared/section-divider"
 import { AboutSection } from "@/widgets/about-section"
 import { BookingModule } from "@/widgets/booking-module"
@@ -9,6 +10,8 @@ export default function Home(){
   return(
     <div>
       <WelcomeSection />
+        <SectionDivider />
+      <Rooms />
         <SectionDivider />
       <AboutSection />
         <SectionDivider />
