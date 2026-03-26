@@ -7,10 +7,10 @@ export function WelcomeSection(){
             <div className={styles.overlay}>
                 <div className={styles.content}>
                     <h1 className={styles.title}>
-                        Добро пожаловать в гостиницу &quot;Уютное море&quot; в Анапе!
+                        Добро пожаловать в гостевой дом &quot;Уютное море&quot; в Анапе!
                     </h1>
                     <p className={styles.description}>
-                        Расположенная по адресу: <span className={styles.highlight}>г. Анапа, ул. Магнолии, д. 21/2</span>, наша гостиница предлагает <span className={styles.highlight}>12 уютных номеров</span>, комфорт и спокойствие для каждого гостя.
+                        Расположенная по адресу: <span className={styles.highlight}>г. Анапа, ул. Магнолии, д. 21/2</span>, наш гостевой дом предлагает <span className={styles.highlight}>12 уютных номеров</span>, комфорт и спокойствие для каждого гостя.
                     </p>
                     <p className={styles.description}>
                         Наши номера оснащены: кондиционер, Wi-Fi, телевизор, холодильник.
