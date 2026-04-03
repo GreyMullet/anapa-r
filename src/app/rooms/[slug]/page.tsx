@@ -5,10 +5,13 @@ import { useState } from "react"
 import { roomImageCounts } from "@/features/rooms"
 import Image from "next/image"
 import styles from "./style.module.css"
+import { roomsPrms } from "@/features/rooms/config/roomsParams"
 
 export default function RoomDetailed(){
   const params=useParams()
   const slug=params.slug as string
+
+  const room=roomsPrms.find(room=>room.slug===slug)
 
   const [fullscreenSrc, setFullscreenSrc]=useState<string|null>(null)
 
@@ -23,7 +26,7 @@ export default function RoomDetailed(){
   return(
     <div className={styles.container}>
       <h1 className={styles.title}>
-        {slug.replace(/-/g, " ").replace(/\b\w/g, (c)=>c.toUpperCase())}
+        {room?.name}
       </h1>
 
       <div className={styles.heroMedia}>
@@ -63,7 +66,7 @@ export default function RoomDetailed(){
             >
               <Image
                 src={src}
-                alt={`Фото ${i + 1}`}
+                alt={`Фото ${i+1}`}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className={styles.photo}

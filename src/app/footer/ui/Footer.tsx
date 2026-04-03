@@ -5,7 +5,7 @@ export const Footer=()=>{
     <footer className={styles.footer} id="contacts">
       <div className={styles.container}>
         <div className={styles.infoBlock}>
-          <h3 className={styles.title}>Гостиница «Уютное море»</h3>
+          <h3 className={styles.title}>Гостевой дом «Уютное море»</h3>
           <p className={styles.address}>г. Анапа, ул. Магнолии, д. 21/2</p>
         </div>
 
