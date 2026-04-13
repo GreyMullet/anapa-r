@@ -3,9 +3,9 @@
 import { useParams } from "next/navigation"
 import { useState } from "react"
 import { roomImageCounts } from "@/features/rooms"
+import { roomsPrms } from "@/features/rooms/config/roomsParams"
 import Image from "next/image"
 import styles from "./style.module.css"
-import { roomsPrms } from "@/features/rooms/config/roomsParams"
 
 export default function RoomDetailed(){
   const params=useParams()

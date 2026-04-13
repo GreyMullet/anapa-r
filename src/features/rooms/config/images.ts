@@ -3,7 +3,7 @@ export const roomImageCounts: Record<string, number>={
     "south-apart": 12,
     "north-apart": 6,
     "small-apart": 5,
-    "2-places": 11,
-    "4-places": 24,
-    "5-places": 19
+    "2-places": 8,
+    "4-places": 20,
+    "5-places": 16
 }
