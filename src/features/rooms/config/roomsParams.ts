@@ -16,7 +16,7 @@ export const roomsPrms: RoomsParams=[
       image: "/rooms/two-places.jpg"
     },
     {
-      name: "3+1",
+      name: "4+1",
       slug: "4-places",
       description: `
         Студия 35,4 м² · 3500 ₽/сутки
@@ -32,7 +32,7 @@ export const roomsPrms: RoomsParams=[
       image: "/rooms/four-places.jpg"
     },
     {
-      name: "4+1",
+      name: "3+2",
       slug: "5-places",
       description: `
         Студия 45,4 м² · 3500 ₽/сутки
